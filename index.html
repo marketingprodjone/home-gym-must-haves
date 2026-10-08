@@ -5,6 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Amazon Must-Haves: Full Body Workout &amp; Home Gym Essentials</title>
 <meta name="description" content="16 home gym essentials on Amazon: dumbbells, weighted vests, resistance bands, yoga gear and hydration for a full body workout at home.">
+<link rel="canonical" href="https://marketingprodjone.github.io/home-gym-must-haves/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Amazon Must-Haves for a Full Body Workout at Home">
+<meta property="og:description" content="16 home gym essentials on Amazon: dumbbells, weighted vests, resistance bands, yoga gear and hydration.">
+<meta property="og:url" content="https://marketingprodjone.github.io/home-gym-must-haves/">
+<meta property="og:image" content="https://m.media-amazon.com/images/I/81B77cbMRqL._AC_SL1500_.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
@@ -41,6 +48,10 @@ section>.wrap>p{margin:0 0 22px;color:var(--muted);max-width:640px}
 .card .btn{margin-top:auto}
 .note{max-width:720px;margin:48px auto 0;color:var(--muted);font-size:15px}
 footer{padding:32px 20px 48px;color:var(--muted);font-size:14px;text-align:center}
+.follow{margin:0 0 14px;font-size:16px;color:var(--ink);font-weight:500}
+.social{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 22px;margin:0 0 26px;padding:0;list-style:none}
+.social a{color:var(--steel);font-weight:600;text-decoration:underline;text-underline-offset:3px;font-size:16px}
+.social a:hover{color:#000}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
@@ -64,7 +75,10 @@ footer{padding:32px 20px 48px;color:var(--muted);font-size:14px;text-align:cente
   <div class="wrap"><p class="note">Prices, availability and reviews change often, so check the Amazon page for the latest details before you buy. Links on this page are affiliate links: if you buy through them I may earn a small commission at no extra cost to you.</p></div>
 </main>
 
-<footer>&copy; <span id="y"></span> &middot; Product names and images belong to their respective owners. Amazon and the Amazon logo are trademarks of Amazon.com, Inc. or its affiliates.</footer>
+<footer>
+<p class="follow">Follow for more home gym finds</p>
+<ul class="social" id="social"></ul>
+&copy; <span id="y"></span> &middot; Product names and images belong to their respective owners. Amazon and the Amazon logo are trademarks of Amazon.com, Inc. or its affiliates.</footer>
 
 <script>
 var SECTIONS = [
@@ -133,6 +147,20 @@ SECTIONS.forEach(function(s){
     li.appendChild(tile);li.appendChild(b);ul.appendChild(li);
   });
   w.appendChild(h);w.appendChild(p);w.appendChild(ul);sec.appendChild(w);root.appendChild(sec);
+});
+var SOCIAL=[
+ {name:"Pinterest", url:"https://pin.it/1Sy2guh9V"},
+ {name:"Instagram", url:""},
+ {name:"TikTok", url:"https://tiktok.com/@marketingprodjone"},
+ {name:"YouTube", url:"https://www.youtube.com/channel/UC4i4pazkeiyRlNaTunRY05g"},
+ {name:"Facebook", url:"https://www.facebook.com/share/1AWdDuHGQ1"}
+];
+var soc=document.getElementById("social");
+SOCIAL.forEach(function(x){
+  if(!x.url){return;}
+  var li=document.createElement("li");var a=document.createElement("a");
+  a.href=x.url;a.target="_blank";a.rel="noopener";a.textContent=x.name;
+  li.appendChild(a);soc.appendChild(li);
 });
 document.getElementById("y").textContent=new Date().getFullYear();
 </script>
